@@ -1,1 +1,1 @@
-bsc
+This is a playground repo for testing out stuff used in my Bachelor's thesis.
