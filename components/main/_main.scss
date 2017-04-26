@@ -1,0 +1,31 @@
+.main {
+  hr {
+    margin: 0;
+    padding: 0;
+  }
+  padding: 5rem 10rem;
+  margin-left: $nav--width;
+
+  &__features {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #48484a;
+    color: lightgrey;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-hint;
+    font-weight: 200;
+    font-size: .8rem;
+
+    &--desc {
+      font-weight: 800;
+    }
+
+    &--list {
+      color: white;
+    }
+  }
+}

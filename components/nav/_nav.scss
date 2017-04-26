@@ -1,0 +1,31 @@
+.nav {
+    font-family: $font-hint;
+    width: $nav--width;
+    height: 100vh;
+    font-size: 1rem;
+    color: #777;
+    background-color: #48484a;
+    display: block;
+    margin: 0;
+    position: fixed;
+    padding: 4rem 1rem 1rem;
+
+    &__toggles {
+      margin-top: 2rem;
+      line-height: 1.4;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &--active {
+      color: cyan !important;
+
+      &::before {
+        content: "•";
+        margin-right: .3rem;
+      }
+    }
+}
