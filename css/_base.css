@@ -44,30 +44,48 @@ table {
 /* FONTS */
 .nav {
   font-family: "proxima-nova", sans-serif;
-  width: 10rem;
+  width: 12rem;
   height: 100vh;
   font-size: 1rem;
   color: #777;
-  background-color: #48484a;
+  background-color: #222;
   display: block;
   margin: 0;
   position: fixed;
-  padding: 4rem 1rem 1rem; }
+  padding: 2rem 1rem 1rem;
+  z-index: 10;
+  box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.2); }
   .nav__toggles {
     margin-top: 2rem;
     line-height: 1.4; }
   .nav a {
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all 100ms linear; }
+    .nav a:hover {
+      color: cyan; }
   .nav--active {
     color: cyan !important; }
     .nav--active::before {
       content: "•";
       margin-right: .3rem; }
+  .nav h1 {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 1rem; }
+  .nav p {
+    font-size: .9rem;
+    color: #bbb;
+    line-height: 1.3; }
+  .nav hr {
+    margin-top: 2rem;
+    border: 1px dashed #555; }
 
 .main {
-  padding: 5rem 10rem;
-  margin-left: 10rem; }
+  padding: 10rem;
+  margin-left: 12rem; }
   .main hr {
     margin: 0;
     padding: 0; }
@@ -76,7 +94,7 @@ table {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #48484a;
+    background-color: #ccc;
     color: lightgrey;
     padding: 1rem 0;
     text-align: center;
@@ -102,32 +120,90 @@ table {
 .section--lineheight {
   line-height: 1.4; }
 
-.section--initial h1 + p::first-letter, .section--initial h2 + p::first-letter, .section--initial h3 + p::first-letter {
-  font-size: 75px;
+.section--initial hr + p::first-letter, .section--initial h2 + p::first-letter, .section--initial h3 + p::first-letter {
+  font-size: 85px;
   float: left;
   line-height: 60px;
-  padding-top: 4px;
+  padding-top: 13px;
   padding-right: 8px;
   padding-left: 3px; }
 
+.section--intro .intro {
+  font-size: 1.3rem;
+  font-style: italic; }
+
+.section__dividers hr + p {
+  margin-top: 0; }
+
+.section__dividers hr {
+  border: 1px dashed #aaa;
+  width: 2rem;
+  margin: 2rem auto; }
+
+.section--paragraph-indent p {
+  margin-bottom: 0rem; }
+
+.section--paragraph-indent p + p::first-letter {
+  margin-left: 2rem; }
+
 .section--paragraph-spacing p {
-  margin-bottom: 1rem; }
+  margin-bottom: .5rem; }
 
 .type--serif {
-  font-family: "Georgia", serif; }
+  font-family: "warnock-pro-display", serif; }
 
 .type--base-fontsize {
   font-size: 18px; }
 
+.type--headlines p + h1, .type--headlines p + h2, .type--headlines p + h3 {
+  margin-top: 2rem; }
+
 .type--headlines h1 {
-  font-size: 3rem; }
+  font-size: 3.5rem;
+  margin-bottom: .3rem; }
 
 .type--headlines h2 {
-  font-size: 2rem; }
+  font-size: 2.75rem;
+  margin-bottom: .3rem; }
 
 .type--headlines h3 {
-  font-size: 1.5rem; }
+  font-size: 2rem;
+  margin-bottom: .3rem; }
+
+.type--link a {
+  font-style: italic;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+  box-shadow: inset 0 -7px 0 0 #fff, inset 0 -8px 0 0 #777;
+  transition: all 200ms linear; }
+
+.type--link a:hover {
+  box-shadow: inset 0 -6px 0 0 #fff, inset 0 -8px 0 0 #777; }
+
+.type__opentype--ligatures {
+  font-variant-ligatures: common-ligatures;
+  -moz-font-feature-settings: "liga", "clig";
+  -webkit-font-feature-settings: "liga", "clig";
+  font-feature-settings: "liga", "clig"; }
+
+.type__opentype--smallcaps h1, .type__opentype--smallcaps h2, .type__opentype--smallcaps h3 {
+  font-variant-caps: small-caps;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp"; }
+
+.type__opentype--oldstyle {
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "onum";
+  -webkit-font-feature-settings: "onum";
+  font-feature-settings: "onum"; }
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-variant-ligatures: no-common-ligatures;
+  -moz-font-feature-settings: "liga" 0, "clig" 0;
+  -webkit-font-feature-settings: "liga" 0, "clig" 0;
+  font-feature-settings: "liga" 0, "clig" 0; }

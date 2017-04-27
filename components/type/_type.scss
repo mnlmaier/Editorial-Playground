@@ -8,16 +8,64 @@
   }
 
   &--headlines {
+    p+h1, p+h2, p+h3 {
+      margin-top: 2rem;
+    }
+
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      margin-bottom: .3rem;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.75rem;
+      margin-bottom: .3rem;
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: .3rem;
+    }
+  }
+
+  &--link {
+    a {
+      font-style: italic;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+      text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+      box-shadow: inset 0 -7px 0 0 #fff, inset 0 -8px 0 0 #777;
+      transition: all 200ms linear;
+    }
+    a:hover {
+      box-shadow: inset 0 -6px 0 0 #fff, inset 0 -8px 0 0 #777;
+    }
+
+  }
+
+  &__opentype {
+    &--ligatures {
+      font-variant-ligatures: common-ligatures;
+      -moz-font-feature-settings: "liga", "clig";
+      -webkit-font-feature-settings: "liga", "clig";
+      font-feature-settings: "liga", "clig";
+    }
+
+    &--smallcaps {
+      h1,h2,h3 {
+        font-variant-caps: small-caps;
+        -moz-font-feature-settings: "smcp";
+        -webkit-font-feature-settings: "smcp";
+        font-feature-settings: "smcp";
+      }
+    }
+
+    &--oldstyle {
+      font-variant-numeric: oldstyle-nums;
+      -moz-font-feature-settings: "onum";
+      -webkit-font-feature-settings: "onum";
+      font-feature-settings: "onum";
     }
   }
 }

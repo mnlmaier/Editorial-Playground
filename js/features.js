@@ -9,7 +9,14 @@ var features = [
   'initial',
   'basefontsize',
   'headlinestyles',
-  'justify'
+  'justify',
+  'smallcaps',
+  'ligatures',
+  'oldstyle',
+  'paragraph--indent',
+  'linkstyles',
+  'dividers',
+  'intro'
 ];
 
 init(features);
@@ -58,6 +65,34 @@ function init($list) {
           break;
         case 'initial':
           document.getElementsByClassName('main__wrapper')[0].classList.toggle('section--initial');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'smallcaps':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('type__opentype--smallcaps');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'ligatures':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('type__opentype--ligatures');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'oldstyle':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('type__opentype--oldstyle');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'paragraph--indent':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('section--paragraph-indent');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'linkstyles':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('type--link');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'dividers':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('section__dividers');
+          event.srcElement.classList.toggle('nav--active');
+          break;
+        case 'intro':
+          document.getElementsByClassName('main__wrapper')[0].classList.toggle('section--intro');
           event.srcElement.classList.toggle('nav--active');
           break;
       }
