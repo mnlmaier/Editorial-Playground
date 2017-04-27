@@ -1,7 +1,5 @@
 console.log('%c s1410238047 - Manuel Maier - University of Applied Sciences, Upper Austria, Campus Hagenberg ', 'background: #222; color: white');
-
 var content = document.getElementsByClassName('main__wrapper')[0];
-console.log(content)
 var features = [
   'type',
   'maxwidth',
