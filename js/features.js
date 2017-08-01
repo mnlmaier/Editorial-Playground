@@ -1,4 +1,5 @@
-console.log('%c s1410238047 - Manuel Maier - University of Applied Sciences, Upper Austria, Campus Hagenberg ', 'background: #222; color: white');
+console.log('%c Manuel Maier - University of Applied Sciences, Upper Austria - 2017 ', 'background: #222; color: white');
+console.log('Thanks for checking the dev console. Any suggestions? Drop me a line: mail@manuelmaier.com!')
 var content = document.getElementsByClassName('main__wrapper')[0];
 var features = [
   'type',
@@ -26,7 +27,6 @@ binding all the click handlers.
 */
 function init($list) {
   $list.forEach(function(item) {
-    console.log(item);
     document.getElementsByClassName(item)[0].addEventListener('click', function(event){
       event.preventDefault();
       var feature = event.srcElement.classList[0];

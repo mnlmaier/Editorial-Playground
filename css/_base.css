@@ -105,7 +105,7 @@ table {
     .main__features--desc {
       font-weight: 800; }
     .main__features--list {
-      color: white; }
+      color: #222; }
 
 .section--maxwidth {
   width: 35rem;
